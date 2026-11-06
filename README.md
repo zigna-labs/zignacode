@@ -37,7 +37,7 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
   - `off` — no sub-agents; the commander works alone.
   - `opportunistic` — parallelize only when there are two or more independent jobs; a single job runs serially.
   - `orchestration` — follow the plan and run its steps in parallel.
-- **Handoff** — who writes the code, independent of the mode above:
+- **Handoff** — who writes the code when delegation is on (with delegation `off`, the commander always writes it):
   - `main` — the commander implements and commits directly.
   - `size` — if the change is small (30 lines by default, configurable), the commander does it; anything bigger goes to a sub-agent.
   - `sub` — always hand off to a sub-agent.
