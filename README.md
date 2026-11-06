@@ -33,13 +33,16 @@ zignacode turns one commander agent (Claude Code, Codex, OpenCode, …) into a t
 
 Running more agents is not the same as getting done sooner. Every sub-agent costs start-up time, tokens, and a merge — so zignacode lets you decide how much to delegate, and pushes back when splitting does not help.
 
-- **Delegation mode** — how eagerly work is split:
+**In every mode, work that depends on other work, or that touches the same files, never runs in parallel.** Only steps that are independent in the plan run side by side.
+
+- **Delegation mode** — how much to delegate and who decides on parallelism:
   - `off` — no sub-agents; the commander works alone.
-  - `opportunistic` — parallelize only when there are two or more independent jobs; a single job runs serially.
-  - `orchestration` — follow the plan and run its steps in parallel.
+  - `opportunistic` (let zignacode decide) — if running the plan in parallel would not save enough time to pay for starting the agents, zignacode runs its steps one at a time instead.
+  - `orchestration` (follow the plan) — the plan's independent steps run in parallel as written, even when zignacode thinks it is not worth it (you still get the warning).
+- **Task size** — work is split so that each sub-agent can finish well within its time budget, not to hit a target number of agents. There is no cap on the number of tasks; how many run at once is set by `maxWorkers`.
 - **Who writes the code** — one number decides it. With delegation on, a change of up to *N* lines (30 by default, configurable; 0 means "always delegate") is written by the commander itself, and anything bigger goes to a sub-agent. With delegation `off`, the commander always writes it.
 - **Auto-merge** — turn it on or off in the settings. When it is on, a step whose `[verify: …]` command passes is merged back automatically; when it is off, you merge each one yourself.
-- **Plan check** — before dispatch, zignacode estimates how much time the parallel split would save. If it is less than the cost of starting the agents, it warns you and recommends running serially.
+- **Plan check** — before dispatch, zignacode estimates how much time the parallel split would save. If it is less than the cost of starting the agents, it warns you (and, in `opportunistic`, runs the steps one at a time).
 - **Overlap guard** — steps that touch the same files are queued one after another automatically, so parallel agents never fight over a file.
 - **Dependencies** — a step marked `[after: N]` waits until the steps it depends on are done.
 
