@@ -20,6 +20,7 @@
 
 zignacode turns one commander agent (Claude Code, Codex, OpenCode, …) into a team. You describe the work in a plan; zignacode dispatches sub-agents in parallel, each in an isolated git worktree, verifies their results, and merges them back — while you watch it happen on a live dashboard.
 
+- **Parallel only when it pays off** — zignacode does not fan out for the sake of it. You choose how eagerly it delegates and who writes the code; small changes stay with the commander, and splitting that would not save time is flagged before anything starts. See [Parallel only when it pays off](#parallel-only-when-it-pays-off).
 - **Real parallelism, zero collisions** — every sub-agent gets its own worktree and branch. No file-write conflicts, no build locks, no half-finished edits in your working copy.
 - **Plan → dispatch → verify → merge** — tasks run as a dependency graph. A step with a `[verify: …]` command is merged only after the command passes; a reviewer step starts only after the steps it depends on are merged.
 - **Live dashboard** — a DAG view and per-agent cards show who is working, waiting, blocked, or done, with diffs one click away.
@@ -27,6 +28,22 @@ zignacode turns one commander agent (Claude Code, Codex, OpenCode, …) into a t
 - **Terminals that survive** — close the window and your terminals (and the agents running in them) keep going. Reopen and you are back where you left off.
 - **Bring your own agents** — works with the agent CLIs you already use, signed in the way you already sign in to them.
 - **Small** — one installer (about 42 MB download, about 120 MB installed). No Node.js or Bun required.
+
+## Parallel only when it pays off
+
+Running more agents is not the same as getting done sooner. Every sub-agent costs start-up time, tokens, and a merge — so zignacode lets you decide how much to delegate, and pushes back when splitting does not help.
+
+- **Delegation mode** — how eagerly work is split:
+  - `off` — no sub-agents; the commander works alone.
+  - `opportunistic` — parallelize only when there are two or more independent jobs; a single job runs serially.
+  - `orchestration` — follow the plan and run its steps in parallel.
+- **Handoff** — who writes the code, independent of the mode above:
+  - `main` — the commander implements and commits directly.
+  - `size` — if the change is small (30 lines by default, configurable), the commander does it; anything bigger goes to a sub-agent.
+  - `sub` — always hand off to a sub-agent.
+- **Plan check** — before dispatch, zignacode estimates how much time the parallel split would save. If it is less than the cost of starting the agents, it warns you and recommends running serially.
+- **Overlap guard** — steps that touch the same files are queued one after another automatically, so parallel agents never fight over a file.
+- **Dependencies** — a step marked `[after: N]` waits until the steps it depends on are done.
 
 ## Requirements
 
