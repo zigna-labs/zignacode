@@ -37,10 +37,8 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
   - `off` — no sub-agents; the commander works alone.
   - `opportunistic` — parallelize only when there are two or more independent jobs; a single job runs serially.
   - `orchestration` — follow the plan and run its steps in parallel.
-- **Handoff** — who writes the code when delegation is on (with delegation `off`, the commander always writes it):
-  - `main` — the commander implements and commits directly.
-  - `size` — if the change is small (30 lines by default, configurable), the commander does it; anything bigger goes to a sub-agent.
-  - `sub` — always hand off to a sub-agent.
+- **Who writes the code** — one number decides it. With delegation on, a change of up to *N* lines (30 by default, configurable; 0 means "always delegate") is written by the commander itself, and anything bigger goes to a sub-agent. With delegation `off`, the commander always writes it.
+- **Auto-merge** — turn it on or off in the settings. When it is on, a step whose `[verify: …]` command passes is merged back automatically; when it is off, you merge each one yourself.
 - **Plan check** — before dispatch, zignacode estimates how much time the parallel split would save. If it is less than the cost of starting the agents, it warns you and recommends running serially.
 - **Overlap guard** — steps that touch the same files are queued one after another automatically, so parallel agents never fight over a file.
 - **Dependencies** — a step marked `[after: N]` waits until the steps it depends on are done.
@@ -69,7 +67,7 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
 2. In the center terminal, start your commander agent — e.g. `claude` or `codex`.
 3. Ask it for something that splits into independent pieces, for example:
    *"Plan and dispatch this with zignacode: add input validation to the signup form, and in parallel write tests for the date utils. Review both when they're done."*
-4. Watch the right-hand dashboard: sub-agents start side by side, each in its own worktree. Verified steps merge back automatically; the reviewer runs after them.
+4. Watch the right-hand dashboard: sub-agents start side by side, each in its own worktree. Verified steps merge back automatically (auto-merge is on by default); the reviewer runs after them.
 5. Open any card to read the diff, or use **merge** on a card to merge it yourself.
 
 <!-- TODO: link to docs once a docs page exists (plan format, roles, settings, keyboard) -->
