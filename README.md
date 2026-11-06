@@ -68,7 +68,7 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
 
 1. Click **＋** in the left pane and pick a git repository (any drive). System folders such as `C:\Windows`, Program Files, ProgramData, AppData, drive roots and your home folder are refused on purpose.
 2. **Set up parallel work first.** Open the settings from the **⚙** at the left end of the status bar:
-   - **Delegation** — choose `opportunistic` (let zignacode decide) or `orchestration` (follow the plan). With `off`, no sub-agents run.
+   - **Delegation** — choose `opportunistic` (let zignacode decide) or `orchestration` (follow the plan). With `off`, no sub-agents run (the default is `opportunistic`).
    - **Tools** — zignacode checks which agent CLIs are installed and signed in (Claude Code, Codex, OpenCode, pi, omp, Antigravity CLI) and lists the models each one offers.
    - **Roles** — sub-agents work in five roles. Assign a tool and a model to each:
      - `coder` — implementation, UI work, refactoring

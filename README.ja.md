@@ -68,7 +68,7 @@ zignacode は、司令塔のエージェント（Claude Code、Codex、OpenCode 
 
 1. 左ペインの **＋** を押して、git リポジトリのフォルダを選びます（どのドライブでも選べます）。`C:\Windows`、Program Files、ProgramData、AppData、ドライブ直下、ホームフォルダは、安全のために開けないようにしています。
 2. **はじめに、並列で動かすための設定をします。** ステータスバー左端の **⚙** から設定画面を開きます。
-   - **委譲** — `opportunistic`（おまかせ）か `orchestration`（計画どおり）を選びます。`off` のままだと、サブエージェントは動きません。
+   - **委譲** — `opportunistic`（おまかせ）か `orchestration`（計画どおり）を選びます。`off` にすると、サブエージェントは動きません（既定は `opportunistic` です）。
    - **ツール** — zignacode が、PC にインストール済みでログインしているエージェントの CLI（Claude Code、Codex、OpenCode、pi、omp、Antigravity CLI）を検知し、それぞれで使えるモデルの一覧を出します。
    - **役割** — サブエージェントは 5 つの役割で働きます。役割ごとに、使うツールとモデルを割り当てます。
      - `coder` — 本実装・UI 開発・リファクタリング
