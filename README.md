@@ -67,11 +67,21 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
 ## First five minutes
 
 1. Click **＋** in the left pane and pick a git repository (any drive). System folders such as `C:\Windows`, Program Files, ProgramData, AppData, drive roots and your home folder are refused on purpose.
-2. In the center terminal, start your commander agent — e.g. `claude` or `codex`.
-3. Ask it for something that splits into independent pieces, for example:
+2. **Set up parallel work first.** Open the settings from the **⚙** at the left end of the status bar:
+   - **Delegation** — choose `opportunistic` (let zignacode decide) or `orchestration` (follow the plan). With `off`, no sub-agents run.
+   - **Tools** — zignacode checks which agent CLIs are installed and signed in (Claude Code, Codex, OpenCode, pi, omp, Antigravity CLI) and lists the models each one offers.
+   - **Roles** — sub-agents work in five roles. Assign a tool and a model to each:
+     - `coder` — implementation, UI work, refactoring
+     - `researcher` — code exploration, dependency checks, spec lookups
+     - `reviewer` — diff audits, bug finding, minimal fix suggestions
+     - `tasker` — writing tests in bulk, fixing type errors, routine work
+     - `architect` — design direction, trade-offs, deep reasoning
+   - You can give sub-agents a fast, low-cost model (for example a DeepSeek model, if your tool offers one) and keep a stronger model for the commander.
+3. In the center terminal, start your commander agent — e.g. `claude` or `codex`.
+4. Ask it for something that splits into independent pieces, for example:
    *"Plan and dispatch this with zignacode: add input validation to the signup form, and in parallel write tests for the date utils. Review both when they're done."*
-4. Watch the right-hand dashboard: sub-agents start side by side, each in its own worktree. Verified steps merge back automatically (auto-merge is on by default); the reviewer runs after them.
-5. Open any card to read the diff, or use **merge** on a card to merge it yourself.
+5. Watch the right-hand dashboard: sub-agents start side by side, each in its own worktree. Verified steps merge back automatically (auto-merge is on by default); the reviewer runs after them.
+6. Open any card to read the diff, or use **merge** on a card to merge it yourself.
 
 <!-- TODO: link to docs once a docs page exists (plan format, roles, settings, keyboard) -->
 
