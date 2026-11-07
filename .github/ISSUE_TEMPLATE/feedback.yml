@@ -1,0 +1,19 @@
+name: Feedback / 感想・要望
+description: Ideas, impressions, or how zignacode fits your workflow. / 改善のアイデア、使ってみた感想、普段の進め方との相性。
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We especially want to hear how parallel work felt compared with tools you already use (Orca, t3code, Paseo, …).
+        特に、普段お使いのツール（Orca、t3code、Paseo など）と比べて、並列の作業がどう感じられたかを知りたいです。
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Your feedback / ご意見
+    validations:
+      required: true
+  - type: input
+    id: compared
+    attributes:
+      label: Tools you compared with (optional) / 比べたツール（任意）

@@ -1,0 +1,55 @@
+name: Bug report / 不具合の報告
+description: Something does not work as expected. / 期待どおりに動かない。
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for trying the zignacode beta. English or Japanese is fine.
+        zignacode のベータをお試しいただき、ありがとうございます。英語でも日本語でもかまいません。
+  - type: input
+    id: version
+    attributes:
+      label: Version / 版数
+      description: "Run `zigna version` in a zignacode terminal, or check the installer name. / zignacode のターミナルで `zigna version`、またはインストーラーの名前で確認できます。"
+      placeholder: "zignacode 0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: "Windows 11 23H2"
+    validations:
+      required: true
+  - type: input
+    id: agents
+    attributes:
+      label: Agent CLIs and models / 使っているエージェントの CLI とモデル
+      description: "Commander and sub-agent roles. / 司令塔と、サブエージェントの役割ごと。"
+      placeholder: "commander: claude (opus) / coder: pi (deepseek-v4.1-flash)"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened? / 何が起きましたか
+      description: "Include the exact error text if any. Screenshots help. / エラーの文面があればそのまま。スクリーンショットがあると助かります。"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect? / 本来どうなるはずでしたか
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 再現の手順
+      placeholder: |
+        1.
+        2.
+        3.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (optional) / ログ（任意）
+      description: "Files under `.zignacode/logs/` or `.zignacode/reports/` in your project. Please remove anything private. / プロジェクトの `.zignacode/logs/` や `.zignacode/reports/` の中身。個人的な内容は消してください。"
+      render: text

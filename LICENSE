@@ -1,0 +1,89 @@
+zignacode Beta License
+
+Copyright (c) 2026 zignacode authors. All rights reserved.
+
+This license applies to the zignacode beta release you downloaded (the
+installer, the application, the bundled executables, and the documentation
+that comes with them — together, the "Software"). The source code of the
+Software is not published and is not covered by this license.
+
+By installing or using the Software, you agree to these terms. If you do not
+agree, do not install or use it.
+
+1. Permission to use
+
+   During the beta, you may install and use the Software free of charge, on
+   computers you own or control, for your own development work — including
+   work on commercial projects.
+
+2. Beta period and expiry
+
+   Each beta build stops working 30 days after the date it was built. The
+   expiry date is shown in the application. After that date, you may not use
+   that build; download the latest beta from
+   https://github.com/zigna-labs/zignacode/releases/latest instead.
+
+   When a build expires, it does not delete or change your files, plans,
+   git worktrees, or branches. Your work stays on your computer.
+
+3. Restrictions
+
+   You may not:
+   (a) copy or redistribute the Software, or make it available for others to
+       download, except by linking to the official release page above;
+   (b) sell, rent, lease, or sublicense the Software, or offer it as a hosted
+       service to others;
+   (c) reverse engineer, decompile, or disassemble the Software, except to the
+       extent that applicable law expressly permits it despite this
+       restriction;
+   (d) modify the Software, or remove or work around its expiry or any other
+       technical limitation;
+   (e) remove or change any copyright or license notices.
+
+4. Your work and your data
+
+   You keep all rights to your code, plans, and anything else you create with
+   the Software. The Software runs on your computer and works inside the
+   folders you choose.
+
+   The Software starts the agent command-line tools you have installed (for
+   example Claude Code, Codex, OpenCode, pi). What those tools send to their
+   providers is governed by your agreements with those providers, not by this
+   license.
+
+5. Third-party components
+
+   The Software includes third-party components (for example the Bun
+   runtime, Tauri, and Rust crates) that are licensed under their own terms.
+   Those terms are listed in THIRD-PARTY-NOTICES.
+
+6. Feedback
+
+   If you send feedback, ideas, or bug reports, you agree that the zignacode
+   authors may use them to improve the Software without any obligation to
+   you.
+
+7. No warranty
+
+   The Software is a beta. It is provided "AS IS", without warranty of any
+   kind, express or implied, including warranties of merchantability, fitness
+   for a particular purpose, and non-infringement. It may contain bugs and
+   may change or stop being available at any time. Keep backups of your work
+   and review changes before you merge them.
+
+8. Limitation of liability
+
+   To the maximum extent permitted by law, the zignacode authors are not
+   liable for any damages arising from the use of, or inability to use, the
+   Software, including loss of data, code, or profits.
+
+9. Termination
+
+   This license ends automatically if you break these terms, or when the beta
+   build you use expires. When it ends, stop using that copy of the Software.
+
+10. Changes
+
+   Later beta builds or the final release may come with different terms. The
+   terms included with each build apply to that build.
+
