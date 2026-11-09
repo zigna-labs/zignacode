@@ -18,9 +18,9 @@ agree, do not install or use it.
 
 2. Beta period and expiry
 
-   Each beta build stops working 30 days after the date it was built. The
-   expiry date is shown in the application. After that date, you may not use
-   that build; download the latest beta from
+   Each beta build stops working after its expiry date. The expiry date is
+   shown in the application and on the release page. After that date, you may
+   not use that build; download the latest beta from
    https://github.com/zigna-labs/zignacode/releases/latest instead.
 
    When a build expires, it does not delete or change your files, plans,
