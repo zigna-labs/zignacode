@@ -14,7 +14,7 @@
   <a href="README.md">English</a> | 日本語
 </p>
 
-<!-- TODO: ダッシュボード（DAG とカード）でエージェントが並列に動いている画面のスクリーンショットか短い動画 -->
+https://github.com/user-attachments/assets/a2fa951c-0baa-458c-9c51-6a08e33a8c72
 
 > **ベータ版です。** 現在は Windows のみの初期ベータです。リリースの間で、機能が変わったり壊れたりすることがあります。
 
