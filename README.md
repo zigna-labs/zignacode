@@ -14,7 +14,7 @@
   English | <a href="README.ja.md">日本語</a>
 </p>
 
-<!-- TODO: screenshot or short demo video of the dashboard (DAG + cards) with agents running in parallel -->
+https://github.com/user-attachments/assets/a2fa951c-0baa-458c-9c51-6a08e33a8c72
 
 > **Beta.** zignacode is in early beta and Windows-only for now. Things may change or break between releases.
 
