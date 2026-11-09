@@ -56,9 +56,9 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
   - [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
   - [Codex CLI](https://github.com/openai/codex)
   - [OpenCode](https://opencode.ai)
-  - [pi](https://github.com/badlogic/pi-mono) <!-- TODO: confirm link -->
-  - [oh-my-pi (omp)](https://github.com/can1357/oh-my-pi) <!-- TODO: confirm link -->
-  - [Antigravity CLI (agy)](https://antigravity.google) <!-- TODO: confirm link -->
+  - [pi](https://github.com/badlogic/pi-mono)
+  - [oh-my-pi (omp)](https://github.com/can1357/oh-my-pi)
+  - [Antigravity CLI (agy)](https://antigravity.google)
 
 ## Install
 
@@ -85,8 +85,6 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
 5. Watch the right-hand dashboard: sub-agents start side by side, each in its own worktree. Verified steps merge back automatically (auto-merge is on by default); the reviewer runs after them.
 6. Open any card to read the diff, or use **merge** on a card to merge it yourself.
 
-<!-- TODO: link to docs once a docs page exists (plan format, roles, settings, keyboard) -->
-
 ## Known limitations (beta)
 
 - Windows only.
@@ -95,9 +93,9 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
 
 ## Feedback
 
-Found a bug or have an idea? Please open an [issue](../../issues). <!-- TODO: decide feedback channels (Issues only, or also Discord, etc.) -->
+Found a bug or have an idea? Please open an [issue](../../issues).
 
 ## License
 
 zignacode is free to use during the beta. It is proprietary software; the source code is not published.
-See [LICENSE](LICENSE) for the terms. <!-- TODO: owner to write the binary license / terms of use -->
+See [LICENSE](LICENSE) for the terms.

@@ -57,9 +57,9 @@ zignacode は、司令塔のエージェント（Claude Code、Codex、OpenCode 
   - [Claude Code](https://docs.anthropic.com/ja/docs/claude-code)
   - [Codex CLI](https://github.com/openai/codex)
   - [OpenCode](https://opencode.ai)
-  - [pi](https://github.com/badlogic/pi-mono) <!-- TODO: リンクの確認 -->
-  - [oh-my-pi（omp）](https://github.com/can1357/oh-my-pi) <!-- TODO: リンクの確認 -->
-  - [Antigravity CLI（agy）](https://antigravity.google) <!-- TODO: リンクの確認 -->
+  - [pi](https://github.com/badlogic/pi-mono)
+  - [oh-my-pi（omp）](https://github.com/can1357/oh-my-pi)
+  - [Antigravity CLI（agy）](https://antigravity.google)
 
 ## インストール
 
@@ -86,8 +86,6 @@ zignacode は、司令塔のエージェント（Claude Code、Codex、OpenCode 
 5. 右側のダッシュボードを見てください。サブエージェントが、それぞれのワークツリーで並んで動き始めます。検証に通ったステップは自動でマージされ（自動マージは既定で ON です）、そのあとでレビューが走ります。
 6. カードを開けば差分を読めます。カードの **merge** から、自分でマージすることもできます。
 
-<!-- TODO: ドキュメントのページができたらリンクを置く（計画書の書式・役割・設定・キーボード） -->
-
 ## 今わかっている制限（ベータ）
 
 - Windows のみ。
@@ -96,9 +94,9 @@ zignacode は、司令塔のエージェント（Claude Code、Codex、OpenCode 
 
 ## フィードバック
 
-不具合や要望は [Issues](../../issues) へお寄せください。 <!-- TODO: 窓口を決める（Issues のみか、Discord なども使うか） -->
+不具合や要望は [Issues](../../issues) へお寄せください。
 
 ## ライセンス
 
 ベータ期間中は無料でお使いいただけます。zignacode はプロプライエタリなソフトウェアで、ソースコードは公開していません。
-条件は [LICENSE](LICENSE) をご覧ください。 <!-- TODO: オーナーが配布物の利用条件を書く -->
+条件は [LICENSE](LICENSE) をご覧ください。
