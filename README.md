@@ -7,7 +7,7 @@
 <h1 align="center">zignacode</h1>
 
 <p align="center">
-  <b>Run your coding agents in parallel — each in its own git worktree — and review everything from one keyboard-first cockpit.</b>
+  <b>Turn one agent into a team.</b><br/>No wall of panes to babysit.
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@ https://github.com/user-attachments/assets/a2fa951c-0baa-458c-9c51-6a08e33a8c72
 
 > **Beta.** zignacode is in early beta and Windows-only for now. Things may change or break between releases.
 
-zignacode turns one commander agent (Claude Code, Codex, OpenCode, …) into a team. You describe the work in a plan; zignacode dispatches sub-agents in parallel, each in an isolated git worktree, verifies their results, and merges them back — while you watch it happen on a live dashboard.
+zignacode turns one commander agent (Claude Code, Codex, OpenCode, …) into a team. You describe the work in a plan; zignacode dispatches sub-agents in parallel, each in an isolated git worktree, verifies their results, and merges them back — and you follow it all on one live dashboard. The commander manages it for you.
 
 - **Parallel only when it pays off** — zignacode does not fan out for the sake of it. You choose how eagerly it delegates and who writes the code; small changes stay with the commander, and splitting that would not save time is flagged before anything starts. See [Parallel only when it pays off](#parallel-only-when-it-pays-off).
 - **Real parallelism, zero collisions** — every sub-agent gets its own worktree and branch. No file-write conflicts, no build locks, no half-finished edits in your working copy.
