@@ -31,8 +31,6 @@ zignacode turns one commander agent (Claude Code, Codex, OpenCode, …) into a t
 - **Your tools, untouched** — zignacode does not write hooks, MCP servers, or settings into your global tool configuration (`~/.claude.json`, `~/.codex/`, …). Integration is attached only to agents launched from inside zignacode.
 - **Terminals that survive** — close the window and your terminals (and the agents running in them) keep going. Reopen and you are back where you left off.
 - **Bring your own agents** — works with the agent CLIs you already use, signed in the way you already sign in to them.
-- **Small** — one installer (about 42 MB download, about 120 MB installed). No Node.js or Bun required.
-
 ## Parallel only when it pays off
 
 Running more agents is not the same as getting done sooner. Every sub-agent costs start-up time, tokens, and a merge — so zignacode lets you decide how much to delegate, and pushes back when splitting does not help.
