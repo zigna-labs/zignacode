@@ -85,6 +85,12 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
 5. Watch the right-hand dashboard: sub-agents start side by side, each in its own worktree. Verified steps merge back automatically (auto-merge is on by default); the reviewer runs after them.
 6. Open any card to read the diff, or use **merge** on a card to merge it yourself.
 
+## View on your phone
+
+Follow the dashboard — DAG, cards and diffs — from your phone, even away from home. It is view-only.
+It works through [Tailscale](https://tailscale.com) on an https address that is open only while zignacode is running. Plain http over Wi-Fi is not supported, because it is not encrypted.
+See the [mobile view guide](docs/mobile-view.md) for the one-time setup.
+
 ## Known limitations (beta)
 
 - Windows only.
