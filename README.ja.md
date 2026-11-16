@@ -61,6 +61,12 @@ zignacode は、司令塔のエージェント（Claude Code、Codex、OpenCode 
   - [oh-my-pi（omp）](https://github.com/can1357/oh-my-pi)
   - [Antigravity CLI（agy）](https://antigravity.google)
 
+### 各ツールの利用規約について
+
+- **agy**: 注意: Google の規約では、個人向けプランの agy を他のアプリから自動で動かすことは認められていません。zignacode はワーカーに agy を使いません。agy は司令塔として、あなた自身が操作する形で使ってください。
+- **OpenCode**: OpenCode の規約には、人が操作しない自動のプロセスからの利用に関する制限があります。OpenCode をワーカーに使う前に、[OpenCode の規約](https://opencode.ai/legal/terms-of-service) をご自身で確認してください。
+- ほかのツールも、ご自身のアカウント・プランの規約の範囲で使ってください。
+
 ## インストール
 
 1. [最新のリリース](../../releases/latest) から `Zignacode_x.y.z_x64-setup.exe` をダウンロードします。

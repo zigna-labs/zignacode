@@ -60,6 +60,12 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
   - [oh-my-pi (omp)](https://github.com/can1357/oh-my-pi)
   - [Antigravity CLI (agy)](https://antigravity.google)
 
+### About each tool's terms
+
+- **agy**: Note: Google's terms do not allow running agy on a consumer plan automatically from other applications. zignacode does not use agy for workers. Use agy as the commander, operated by you directly.
+- **OpenCode**: OpenCode's terms include restrictions on use from unattended automated processes. Before using OpenCode for workers, please review [OpenCode's terms](https://opencode.ai/legal/terms-of-service) yourself.
+- For the other tools, please stay within the terms of your own account and plan.
+
 ## Install
 
 1. Download `Zignacode_x.y.z_x64-setup.exe` from the [latest release](../../releases/latest).
