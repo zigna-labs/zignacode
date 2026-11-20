@@ -64,8 +64,8 @@ zignacode は、司令塔のエージェント（Claude Code、Codex、OpenCode 
 ### 各ツールの利用規約について
 
 - **agy**: 注意: Google の規約では、個人向けプランの agy を他のアプリから自動で動かすことは認められていません。zignacode はワーカーに agy を使いません。agy は司令塔として、あなた自身が操作する形で使ってください。
-- **OpenCode**: OpenCode の規約には、人が操作しない自動のプロセスからの利用に関する制限があります。OpenCode をワーカーに使う前に、[OpenCode の規約](https://opencode.ai/legal/terms-of-service) をご自身で確認してください。
-- ほかのツールも、ご自身のアカウント・プランの規約の範囲で使ってください。
+- **OpenCode**: OpenCode の無料のモデルは OpenCode 以外のツールでは使えないため、zignacode は pi・omp などのモデルの一覧に出しません。OpenCode をワーカーに使う前に、[OpenCode の規約](https://opencode.ai/legal/terms-of-service) をご自身で確認してください。
+- サブエージェントに使うツールと、そのツールで使うサービス（API キー・サブスク）の規約は、ご自身で確認してください。
 
 ## インストール
 
