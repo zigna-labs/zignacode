@@ -1,6 +1,6 @@
 # View on your phone (Tailscale)
 
-From your phone, you can **view** the zignacode dashboard (DAG, cards, diffs) running on your PC — even when you are out. The phone cannot operate anything.
+From your phone, you can **view** the terminal, the dashboard (DAG, cards) and diffs of the zignacode running on your PC — even when you are out. The phone cannot operate anything.
 
 The PC and the phone are connected with [Tailscale](https://tailscale.com), and you open it at an https address. It works on a different Wi-Fi or over mobile data.
 

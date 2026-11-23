@@ -53,13 +53,14 @@ zignacode は、司令塔のエージェント（Claude Code、Codex、OpenCode 
 
 - **Windows 10 / 11（x64）**。macOS と Linux にはまだ対応していません。
 - **git**
-- **エージェントの CLI を 1 つ以上**（インストールしてログイン済みのもの）
+- **司令塔に使うエージェントの CLI を 1 つ以上**（インストールしてログイン済みのもの）
   - [Claude Code](https://docs.anthropic.com/ja/docs/claude-code)
   - [Codex CLI](https://github.com/openai/codex)
   - [OpenCode](https://opencode.ai)
-  - [pi](https://github.com/badlogic/pi-mono)
+  - [pi](https://github.com/earendil-works/pi)
   - [oh-my-pi（omp）](https://github.com/can1357/oh-my-pi)
   - [Antigravity CLI（agy）](https://antigravity.google)
+- サブエージェントは、設定 → **コネクト** から pi とご自身の API キーで用意できます。
 
 ### 各ツールの利用規約について
 
@@ -79,6 +80,7 @@ zignacode は、司令塔のエージェント（Claude Code、Codex、OpenCode 
 2. **はじめに、並列で動かすための設定をします。** ステータスバー左端の **⚙** から設定画面を開きます。
    - **委譲** — `opportunistic`（おまかせ）か `orchestration`（計画どおり）を選びます。`off` にすると、サブエージェントは動きません（既定は `opportunistic` です）。
    - **ツール** — zignacode が、PC にインストール済みでログインしているエージェントの CLI（Claude Code、Codex、OpenCode、pi、omp、Antigravity CLI）を検知し、それぞれで使えるモデルの一覧を出します。
+   - **コネクト** — Claude Code や Codex しか無いときは、ここで pi と OpenCode Go / OpenRouter のキーを用意し、試せます。
    - **役割** — サブエージェントは 5 つの役割で働きます。役割ごとに、使うツールとモデルを割り当てます。
      - `coder` — 本実装・UI 開発・リファクタリング
      - `researcher` — コードの探索・依存関係の調査・仕様の確認
@@ -94,7 +96,7 @@ zignacode は、司令塔のエージェント（Claude Code、Codex、OpenCode 
 
 ## スマホで見る
 
-ダッシュボード（DAG・カード・差分）を、外出先からでもスマホで見られます。見るだけで、操作はできません。
+ターミナル・ダッシュボード（DAG・カード）・差分を、外出先からでもスマホで見られます。見るだけで、操作はできません。
 [Tailscale](https://tailscale.com) を通して、zignacode の起動中だけ開く https の住所で表示します。Wi-Fi での http 接続は、暗号化されないため採用しません。
 最初の 1 回の準備は [スマホで見る（手順書）](docs/mobile-view.ja.md) をご覧ください。
 
@@ -103,6 +105,7 @@ zignacode は、司令塔のエージェント（Claude Code、Codex、OpenCode 
 - Windows のみ。
 - インストーラーに署名がありません（「インストール」を参照）。
 - 古いベータの上から入れ直すと、インストール先に使われないファイルが残ることがあります（害はありません）。
+- コネクトで組み込んだ pi は、サブエージェント用です。ターミナルで司令塔として使うには、pi をご自身でインストールしてください。
 
 ## フィードバック
 

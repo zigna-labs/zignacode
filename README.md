@@ -52,13 +52,14 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
 
 - **Windows 10 / 11 (x64)**. macOS and Linux are not supported yet.
 - **git**
-- **At least one agent CLI**, installed and signed in:
+- **At least one agent CLI for the commander**, installed and signed in:
   - [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
   - [Codex CLI](https://github.com/openai/codex)
   - [OpenCode](https://opencode.ai)
-  - [pi](https://github.com/badlogic/pi-mono)
+  - [pi](https://github.com/earendil-works/pi)
   - [oh-my-pi (omp)](https://github.com/can1357/oh-my-pi)
   - [Antigravity CLI (agy)](https://antigravity.google)
+- For sub-agents, you can set up pi with your API key from Settings → **Connect**.
 
 ### About each tool's terms
 
@@ -78,6 +79,7 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
 2. **Set up parallel work first.** Open the settings from the **⚙** at the left end of the status bar:
    - **Delegation** — choose `opportunistic` (let zignacode decide) or `orchestration` (follow the plan). With `off`, no sub-agents run (the default is `opportunistic`).
    - **Tools** — zignacode checks which agent CLIs are installed and signed in (Claude Code, Codex, OpenCode, pi, omp, Antigravity CLI) and lists the models each one offers.
+   - **Connect** — if you only have Claude Code or Codex, add pi and an OpenCode Go or OpenRouter key here, and test it.
    - **Roles** — sub-agents work in five roles. Assign a tool and a model to each:
      - `coder` — implementation, UI work, refactoring
      - `researcher` — code exploration, dependency checks, spec lookups
@@ -93,7 +95,7 @@ Running more agents is not the same as getting done sooner. Every sub-agent cost
 
 ## View on your phone
 
-Follow the dashboard — DAG, cards and diffs — from your phone, even away from home. It is view-only.
+Follow the terminal, the dashboard (DAG and cards) and diffs from your phone, even away from home. It is view-only.
 It works through [Tailscale](https://tailscale.com) on an https address that is open only while zignacode is running. Plain http over Wi-Fi is not supported, because it is not encrypted.
 See the [mobile view guide](docs/mobile-view.md) for the one-time setup.
 
@@ -102,6 +104,7 @@ See the [mobile view guide](docs/mobile-view.md) for the one-time setup.
 - Windows only.
 - The installer is unsigned (see *Install*).
 - Upgrading over an older beta can leave unused files in the install folder; they are harmless.
+- pi added from Connect is for sub-agents only. To use pi as the commander in the terminal, install it yourself.
 
 ## Feedback
 
