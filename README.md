@@ -104,7 +104,6 @@ See the [mobile view guide](docs/mobile-view.md) for the one-time setup.
 - Windows only.
 - The installer is unsigned (see *Install*).
 - Upgrading over an older beta can leave unused files in the install folder; they are harmless.
-- pi added from Connect is for sub-agents only. To use pi as the commander in the terminal, install it yourself.
 
 ## Feedback
 
