@@ -29,7 +29,7 @@ zignacode turns one commander agent (Claude Code, Codex, OpenCode, …) into a t
 - **Plan → dispatch → verify → merge** — tasks run as a dependency graph. A step with a `[verify: …]` command is merged only after the command passes; a reviewer step starts only after the steps it depends on are merged.
 - **Live dashboard** — a DAG view and per-agent cards show who is working, waiting, blocked, or done, with diffs one click away.
 - **Your tools, untouched** — zignacode does not write hooks, MCP servers, or settings into your global tool configuration (`~/.claude.json`, `~/.codex/`, …). Integration is attached only to agents launched from inside zignacode.
-- **Terminals that survive** — close the window and your terminals (and the agents running in them) keep going. Reopen and you are back where you left off.
+- **Terminals that survive** — close the window and your terminals (and the agents running in them) keep going. Reopen and you are back where you left off. If a restart stops them, you can choose to resume the Claude Code conversation the next time you start (other tools, once the tool supports it).
 - **Bring your own agents** — works with the agent CLIs you already use, signed in the way you already sign in to them.
 ## Parallel only when it pays off
 
